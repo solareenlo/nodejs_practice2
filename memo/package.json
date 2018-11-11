@@ -15,5 +15,9 @@
     "url": "https://github.com/solareenlo/nodejs_practice2/issues"
   },
   "homepage": "https://github.com/solareenlo/nodejs_practice2#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.16.4",
+    "grunt": "^1.0.3"
+  }
 }
