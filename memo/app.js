@@ -27,5 +27,7 @@ if(command === "add") {
 } else if(command === "read") {
   notes.readNote(argv.title);
 } else if(command === "remove") {
-  notes.removeNote(argv.title);
+  let noteRemoved = notes.removeNote(argv.title);
+  let message = noteRemoved ? "削除されました." : "見つかりませんでした.";
+  console.log(message);
 }

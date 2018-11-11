@@ -51,6 +51,7 @@ let removeNote = title => {
   let filteredNotes = notes.filter(note => note.title !== title);
   // 削除後のデータを保存
   saveNotes(filteredNotes);
+  return notes.length !== filteredNotes.length;
 };
 
 module.exports = {
