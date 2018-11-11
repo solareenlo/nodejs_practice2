@@ -21,7 +21,9 @@ if(command === "add") {
     console.log("タイトルが重複しています.");
   }
 } else if(command === "list") {
-  notes.showAll();
+  let allNotes = notes.showAll();
+  console.log(`表示数:${allNotes.length}`);
+  allNotes.forEach(note => notes.logNotes(note));
 } else if(command === "read") {
   let note = notes.readNote(argv.title);
   if(note) {

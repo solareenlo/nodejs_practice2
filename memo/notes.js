@@ -36,7 +36,7 @@ let addNote = (title, body) => {
 };
 
 let showAll = () => {
-  console.log("全メモを表示");
+  return fetchNotes();
 };
 
 let readNote = title => {
