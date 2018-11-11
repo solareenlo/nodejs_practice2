@@ -56,9 +56,16 @@ let removeNote = title => {
   return notes.length !== filteredNotes.length;
 };
 
+let logNotes = note => {
+    console.log("---------------");
+    console.log(`タイトル:${note.title}`);
+    console.log(`内容:${note.body}`);
+};
+
 module.exports = {
   addNote,
   showAll,
   readNote,
-  removeNote
+  removeNote,
+  logNotes
 };
