@@ -14,6 +14,10 @@ let fetchNotes = () => {
   }
 };
 
+let saveNotes = notes => {
+  fs.writeFileSync("note-data.json", JSON.stringify(notes));
+};
+
 let addNote = (title, body) => {
   let notes = fetchNotes();
   let note = {
@@ -26,7 +30,7 @@ let addNote = (title, body) => {
   let duplicatedNotes = notes.filter(note => note.title === title);
   if(duplicatedNotes.length === 0) {
     notes.push(note);
-    fs.writeFileSync("note-data.json", JSON.stringify(notes));
+    saveNotes(notes);
   }
 };
 
