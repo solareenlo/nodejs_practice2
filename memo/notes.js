@@ -1,5 +1,3 @@
-console.log("notes.js稼働");
-
 const fs = require("fs");
 
 let fetchNotes = () => {
