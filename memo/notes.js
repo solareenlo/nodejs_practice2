@@ -40,7 +40,9 @@ let showAll = () => {
 };
 
 let readNote = title => {
-  console.log("個別メモ表示", title);
+  let notes = fetchNotes();
+  let filteredNotes = notes.filter(note => note.title === title);
+  return filteredNotes[0];
 };
 
 let removeNote = title => {
