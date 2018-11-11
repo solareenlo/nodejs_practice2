@@ -1,7 +1,15 @@
 console.log("notes.js稼働");
 
+const fs = require("fs");
+
 let addNote = (title, body) => {
-  console.log("メモ追加", title, body);
+  let notes = [];
+  let note = {
+    title,
+    body
+  };
+  notes.push(note);
+  fs.writeFileSync("note-data.json", JSON.stringify(notes));
 };
 
 let showAll = () => {
