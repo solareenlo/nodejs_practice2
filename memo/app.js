@@ -1,11 +1,13 @@
 console.log("app.js稼働開始");
 
 const fs = require("fs");
-
+const yargs = require("yargs");
+const argv = yargs.argv;
 const notes = require("./notes.js");
 
 // ↓コンソールに入力されたコマンドの情報を出力する
-// console.log(process.argv);
+console.log("process", process.argv);
+console.log("yargs", argv);
 
 let command = process.argv[2];
 console.log("コマンド:", command);
