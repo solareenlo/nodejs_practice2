@@ -44,7 +44,13 @@ let readNote = title => {
 };
 
 let removeNote = title => {
-  console.log("メモ削除", title);
+  // 既存のデータを取得
+  let notes = fetchNotes();
+  // 引数をもとに検索し、見つかったら削除
+  // titleが同じで無いデータを新たな配列に格納してfilteredNotesに格納
+  let filteredNotes = notes.filter(note => note.title !== title);
+  // 削除後のデータを保存
+  saveNotes(filteredNotes);
 };
 
 module.exports = {
